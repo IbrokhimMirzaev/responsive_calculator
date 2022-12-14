@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:fontFamily="@font/works_sans_light"
-        android:text="6,291÷5"
+        android:text="@string/_6_291_5"
         android:textColor="@color/white40"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:fontFamily="@font/works_sans_light"
-        android:text="1,258.2"
+        android:text="@string/_1_258_2"
         android:textColor="@color/white"
         android:textSize="96sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +62,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="C"
+                android:text="@string/c"
                 android:textColor="@color/white"
                 android:textSize="32sp"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -88,7 +88,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="%"
+                android:text="@string/percent"
                 android:textColor="@color/white"
                 android:textSize="32sp" />
 
@@ -99,7 +99,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button_blue"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="÷"
+                android:text="@string/boluv"
                 android:textColor="@color/white"
                 android:textSize="32sp" />
         </LinearLayout>
@@ -120,7 +120,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="7"
+                android:text="@string/seven"
                 android:textColor="@color/white"
                 android:textSize="32sp"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -133,7 +133,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="8"
+                android:text="@string/_8"
                 android:textColor="@color/white"
                 android:textSize="32sp" />
 
@@ -145,7 +145,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="9"
+                android:text="@string/_9"
                 android:textColor="@color/white"
                 android:textSize="32sp" />
 
@@ -156,7 +156,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button_blue"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="×"
+                android:text="@string/multiply"
                 android:textColor="@color/white"
                 android:textSize="32sp" />
         </LinearLayout>
@@ -177,7 +177,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="4"
+                android:text="@string/_4"
                 android:textColor="@color/white"
                 android:textSize="32sp"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -190,7 +190,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="5"
+                android:text="@string/_5"
                 android:textColor="@color/white"
                 android:textSize="32sp" />
 
@@ -202,7 +202,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="6"
+                android:text="@string/_6"
                 android:textColor="@color/white"
                 android:textSize="32sp" />
 
@@ -213,7 +213,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button_blue"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="–"
+                android:text="@string/minus"
                 android:textColor="@color/white"
                 android:textSize="32sp" />
         </LinearLayout>
@@ -234,7 +234,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="1"
+                android:text="@string/one"
                 android:textColor="@color/white"
                 android:textSize="32sp"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -247,7 +247,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="2"
+                android:text="@string/_2"
                 android:textColor="@color/white"
                 android:textSize="32sp" />
 
@@ -259,7 +259,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="3"
+                android:text="@string/_3"
                 android:textColor="@color/white"
                 android:textSize="32sp" />
 
@@ -270,7 +270,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button_blue"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="+"
+                android:text="@string/plus"
                 android:textColor="@color/white"
                 android:textSize="32sp" />
         </LinearLayout>
@@ -291,7 +291,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="."
+                android:text="@string/dot"
                 android:textColor="@color/white"
                 android:textSize="32sp"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -304,7 +304,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="0"
+                android:text="@string/zero"
                 android:textColor="@color/white"
                 android:textSize="32sp" />
 
@@ -328,7 +328,7 @@
                 android:background="@drawable/border"
                 android:backgroundTint="@color/dark_button_blue"
                 android:fontFamily="@font/work_sans_medium"
-                android:text="="
+                android:text="@string/equals"
                 android:textColor="@color/white"
                 android:textSize="32sp" />
         </LinearLayout>
