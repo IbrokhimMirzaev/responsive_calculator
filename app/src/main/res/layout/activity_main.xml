@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg"
     android:padding="20dp">
 
     <TextView
@@ -12,10 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:fontFamily="@font/works_sans_light"
         android:text="0"
-        android:textColor="@color/white40"
-        android:textSize="40sp"
+        style="@style/text_style1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -26,13 +23,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/works_sans_light"
         android:text="@string/_1_258_2"
-        android:textColor="@color/white"
-        android:textSize="96sp"
+        style="@style/text_style2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text1"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintTop_toBottomOf="@id/text1" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -60,12 +54,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
                 android:layout_weight="1"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/dark_button"
-                android:fontFamily="@font/work_sans_medium"
                 android:text="@string/c"
-                android:textColor="@color/white"
-                android:textSize="32sp"
+                style="@style/btn_light"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <com.google.android.material.button.MaterialButton
@@ -76,23 +66,20 @@
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 app:cornerRadius="24dp"
+                style="@style/btn_light"
                 app:icon="@drawable/plusminus"
                 android:textAlignment="center"
-                app:iconGravity="textStart"
-                android:backgroundTint="@color/dark_button" />
+                app:iconGravity="textStart" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/percent"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
+                style="@style/btn_light"
                 android:layout_weight="1"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/dark_button"
-                android:fontFamily="@font/work_sans_medium"
                 android:text="@string/percent"
-                android:textColor="@color/white"
-                android:textSize="32sp" />
+                />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/division"
@@ -120,13 +107,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
-                android:layout_weight="1"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/darkk_button"
-                android:fontFamily="@font/work_sans_medium"
                 android:text="@string/seven"
-                android:textColor="@color/white"
-                android:textSize="32sp"
+                android:layout_weight="1"
+                style="@style/btn_dark"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -135,12 +118,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
                 android:layout_weight="1"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/darkk_button"
-                android:fontFamily="@font/work_sans_medium"
-                android:text="@string/_8"
-                android:textColor="@color/white"
-                android:textSize="32sp" />
+                style="@style/btn_dark"
+                android:text="@string/_8" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/nine"
@@ -148,12 +127,9 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
                 android:layout_weight="1"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/darkk_button"
-                android:fontFamily="@font/work_sans_medium"
                 android:text="@string/_9"
-                android:textColor="@color/white"
-                android:textSize="32sp" />
+                style="@style/btn_dark"
+                />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/multiply"
@@ -182,12 +158,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
                 android:layout_weight="1"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/darkk_button"
-                android:fontFamily="@font/work_sans_medium"
                 android:text="@string/_4"
-                android:textColor="@color/white"
-                android:textSize="32sp"
+                style="@style/btn_dark"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -196,12 +168,9 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
                 android:layout_weight="1"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/darkk_button"
-                android:fontFamily="@font/work_sans_medium"
                 android:text="@string/_5"
-                android:textColor="@color/white"
-                android:textSize="32sp" />
+                style="@style/btn_dark"
+                />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/six"
@@ -209,12 +178,9 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
                 android:layout_weight="1"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/darkk_button"
-                android:fontFamily="@font/work_sans_medium"
                 android:text="@string/_6"
-                android:textColor="@color/white"
-                android:textSize="32sp" />
+                style="@style/btn_dark"
+                />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/minus"
@@ -243,12 +209,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
                 android:layout_weight="1"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/darkk_button"
-                android:fontFamily="@font/work_sans_medium"
                 android:text="@string/one"
-                android:textColor="@color/white"
-                android:textSize="32sp"
+                style="@style/btn_dark"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -257,12 +219,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
                 android:layout_weight="1"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/darkk_button"
-                android:fontFamily="@font/work_sans_medium"
-                android:text="@string/_2"
-                android:textColor="@color/white"
-                android:textSize="32sp" />
+                style="@style/btn_dark"
+                android:text="@string/_2" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/three"
@@ -270,12 +228,9 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
                 android:layout_weight="1"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/darkk_button"
-                android:fontFamily="@font/work_sans_medium"
                 android:text="@string/_3"
-                android:textColor="@color/white"
-                android:textSize="32sp" />
+                style="@style/btn_dark"
+                />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/plus"
@@ -303,12 +258,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
                 android:layout_weight="1"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/darkk_button"
-                android:fontFamily="@font/work_sans_medium"
                 android:text="@string/dot"
-                android:textColor="@color/white"
-                android:textSize="32sp"
+                style="@style/btn_dark"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -317,12 +268,8 @@
                 android:layout_height="match_parent"
                 android:layout_marginEnd="16dp"
                 android:layout_weight="1"
-                android:background="@drawable/border"
-                android:backgroundTint="@color/darkk_button"
-                android:fontFamily="@font/work_sans_medium"
                 android:text="@string/zero"
-                android:textColor="@color/white"
-                android:textSize="32sp" />
+                style="@style/btn_dark" />
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="0dp"
@@ -332,10 +279,10 @@
                 android:insetTop="0dp"
                 android:insetBottom="0dp"
                 app:cornerRadius="24dp"
+                style="@style/btn_dark"
                 app:icon="@drawable/delete"
                 android:textAlignment="center"
-                app:iconGravity="textStart"
-                android:backgroundTint="@color/darkk_button" />
+                app:iconGravity="textStart" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="0dp"

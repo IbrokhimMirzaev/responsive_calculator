@@ -11,6 +11,44 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:background">#EBEBEC</item>
         <!-- Customize your theme here. -->
+
+        <!--    DARK GREY BTN white in light, 2E2F38 in dark     -->
+
+    </style>
+
+    <style name="btn_light">
+        <item name="android:background">@drawable/border</item>
+        <item name="backgroundTint">#D2D3DA</item>
+        <item name="fontFamily">@font/work_sans_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="iconTint">@color/black</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="btn_dark">
+        <item name="android:background">@drawable/border</item>
+        <item name="backgroundTint">@color/white</item>
+        <item name="android:fontFamily">@font/work_sans_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="iconTint">@color/black</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="btn_blue">
+
+    </style>
+
+    <style name="text_style1">
+        <item name="fontFamily">@font/works_sans_light</item>
+        <item name="android:textColor">#919192</item>
+        <item name="android:textSize">60sp</item>
+    </style>
+
+    <style name="text_style2">
+        <item name="fontFamily">@font/works_sans_light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">90sp</item>
     </style>
 </resources>
