@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Responsive Calculator</string>
-    <string name="_6_291_5">6,291÷5</string>
     <string name="_1_258_2">1,258.2</string>
     <string name="c">C</string>
     <string name="percent">%</string>
