@@ -14,8 +14,6 @@
         android:layout_marginTop="100dp"
         android:text="0"
         android:maxLines="1"
-        android:autoSizeMaxTextSize="60sp"
-        android:autoSizeMinTextSize="20sp"
         android:autoSizeTextType="uniform"
         style="@style/text_style1"
         app:layout_constraintBottom_toBottomOf="parent"

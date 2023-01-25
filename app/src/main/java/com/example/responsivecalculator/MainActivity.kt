@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Switch
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatDelegate
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private lateinit var one: Button
@@ -29,6 +31,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var oper: TextView
     private lateinit var result: TextView
+
+    private lateinit var switchBtn: Switch
 
     private var isPoint = true
     private var isSymbol = false
@@ -59,14 +63,26 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         clear.setOnClickListener { clear() }
 
         delete.setOnClickListener {
-            if (oper.text.length == 1){
+            if (oper.text.length == 1) {
                 clear()
-            }
-            else {
-                if (oper.text[oper.text.length - 1] == '.'){
+            } else {
+                if (oper.text[oper.text.length - 1] == '.') {
                     isPoint = true
                 }
+                if (!oper.text[oper.text.length - 1].isDigit()) {
+                    isSymbol = true
+                }
                 oper.text = oper.text.substring(0, oper.text.length - 1)
+            }
+
+            var str: String = oper.text.toString()
+
+            if (!oper.text[oper.text.length - 1].isDigit()) {
+                oper.text = oper.text.substring(0, oper.text.length - 1)
+                result.text = calculate()
+                oper.text = str
+            } else {
+                result.text = calculate()
             }
         }
 
@@ -75,6 +91,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         plus.setOnClickListener { addSymbol(plus.text.toString()) }
         minus.setOnClickListener { addSymbol(minus.text.toString()) }
 
+        switchBtn.setOnClickListener {
+            if (switchBtn.isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }
+        }
     }
 
     private fun initUI() {
@@ -100,6 +123,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         multiply = findViewById(R.id.multiply)
         plus = findViewById(R.id.plus)
         minus = findViewById(R.id.minus)
+
+        switchBtn = findViewById(R.id.themeSwitcher)
     }
 
     override fun onClick(p0: View?) {
@@ -115,15 +140,71 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun calculate(): String {
-        var r = "123"
-        createArray(oper.text.toString())
-        return r
+        var res: Any = "0"
+        var myList: MutableList<Any> = createArray(oper.text.toString())
+        var i = 0
+        var j = 0
+
+        if (myList.size >= 3 && myList.size % 2 != 0) {
+            while (i < myList.size) {
+                if ((myList[i].toString() == "×") || (myList[i].toString() == "÷")) {
+                    if (myList[i].toString() == "×") {
+                        res = (myList[i - 1].toString().toDouble()) * (myList[i + 1].toString()
+                            .toDouble())
+                        replace(i, myList)
+                        myList.add(i - 1, res)
+                        i -= 2
+                    } else {
+                        res = (myList[i - 1].toString().toDouble()) / (myList[i + 1].toString()
+                            .toDouble())
+                        replace(i, myList)
+                        myList.add(i - 1, res)
+                        i -= 2
+                    }
+                }
+                i++
+            }
+            while (j < myList.size) {
+                if ((myList[j].toString() == "+") || (myList[j].toString() == "–")) {
+                    if (myList[j].toString() == "+") {
+                        res = (myList[j - 1].toString().toDouble()) + (myList[j + 1].toString()
+                            .toDouble())
+                        replace(j, myList)
+                        myList.add(j - 1, res)
+                        j -= 2
+                    } else {
+                        res = (myList[j - 1].toString().toDouble()) - (myList[j + 1].toString()
+                            .toDouble())
+                        replace(j, myList)
+                        myList.add(j - 1, res)
+                        j -= 2
+                    }
+                }
+                j++
+            }
+        }
+
+        if (myList.size != 1) {
+            res = (Math.round(res.toString().toDouble() * 10.0) / 10.0).toString()
+        }
+        if (myList.size == 1) {
+            res = myList[0].toString()
+        }
+
+        return res.toString()
     }
 
     private fun clear() {
         oper.text = "0"
+        result.text = "0"
         isPoint = true
         isSymbol = false
+    }
+
+    private fun replace(i: Int, myList: MutableList<Any>) {
+        myList.removeAt(i)
+        myList.removeAt(i)
+        myList.removeAt(i - 1)
     }
 
     private fun addSymbol(symbol: String) {
@@ -138,11 +219,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         isPoint = true
     }
 
-    private fun createArray(s: String): MutableList<Any> {
+    private fun createArray(operText: String): MutableList<Any> {
         var list = mutableListOf<Any>()
 
         var temp = ""
-        for (i in s) {
+        for (i in operText) {
             if (i.isDigit() || i == '.') {
                 temp += i
             } else {
